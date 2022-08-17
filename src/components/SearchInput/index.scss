@@ -1,0 +1,11 @@
+@import "../../assets/styles/colors.scss";
+
+.main {
+  border: none;
+  color: $green-primary;
+  width: 40rem;
+  height: 3rem;
+  border-radius: 1rem;
+  padding: 0.625rem;
+  font-size: 1.5rem;
+}
