@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Test Agily
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Run the project
 
-## Available Scripts
+1. Clone the project
+2. Run the backend: `node index.js`. Runs on localhost port 4000
+3. Move to client: `cd client`
+4. Run client: `npm run start`. Runs on localhost port 3000
 
-In the project directory, you can run:
+## Coding technics
 
-### `npm start`
+To build this project, I used React, Typescript and axios in the front-end and Nodejs and express for the backend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Front-end
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For the front-end, I decided to use functional components paradigm for a faster development.
+Using typescript was also a choice to make the code more solid in terms of type checking.
+I tried to factorize as much as possible my code with components for cards.
 
-### `npm test`
+I used custom hooks for data fetching as it makes our pages components way cleaner to read and debug in the future.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For the styling, I used scss to define color variables easily across the app.
 
-### `npm run build`
+Responsiveness was made possible with flexbox for a faster and easier development.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Finally, I decided to implement translations from the beginning to avoid hardcoding content and reduce future technical debt.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Recommendations:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I would add endpoints in a constants file to avoid hardcoding. Also, right now, we are calling localhost url but in the future, we should define the base url in the .env file.
 
-### `npm run eject`
+### Back-end
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For the backend, I decided to stay simple with one file, index.js with two endpoints to fetch city data and weather data.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I decided to use js and not ts for boilerplate time that I did not have. I needed to build something functional and I think it is better to ship something rather than nothing.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+For the cache verification, I built two small functions to verify if the cache key existed. If it existed, the fetch request to the API was not ran and cache value was returned. This enabled a better performance of the requests to the server.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Recommendations:
 
-## Learn More
+I would definitely use a more structured file organization. I would create a folder for routes, another for handlers, other for cache verification etc...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I would also use typesscript for a more solid server with defined models that match the client.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I would then add better error handlers in each endpoints to avoid the user to have unknown errors.
