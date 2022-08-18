@@ -2,5 +2,11 @@
   "home": {
     "mainTitle": "The Forecast Weather App",
     "inputPlaceholder": "Search for a city"
+  },
+  "today": {
+    "todayWeather": "Today's weather",
+    "humidity": "Humidity",
+    "pressure": "Pressure",
+    "wind": "Wind"
   }
 }

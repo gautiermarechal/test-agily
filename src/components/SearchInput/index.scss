@@ -1,11 +1,49 @@
 @import "../../assets/styles/colors.scss";
 
-.main {
-  border: none;
-  color: $green-primary;
-  width: 40rem;
-  height: 3rem;
-  border-radius: 1rem;
-  padding: 0.625rem;
-  font-size: 1.5rem;
+.wrapper-search-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .main-input {
+    border: none;
+    color: $green-primary;
+    width: 40rem;
+    height: 3rem;
+    border-radius: 1rem;
+    padding: 0.625rem 0.625rem 0.625rem 1.25rem;
+    font-size: 1.5rem;
+  }
+
+  .dropdown-hidden {
+    display: none;
+  }
+
+  .dropdown {
+    background-color: $white-primary;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 4.25rem;
+    margin-top: 0.625rem;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem;
+  }
+  .dropdown-item {
+    padding: 0.625rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    span {
+      margin-left: 0.625rem;
+      color: $grey-primary;
+      font-style: italic;
+    }
+  }
+  .dropdown-item:hover {
+    background-color: $silver-primary;
+  }
 }

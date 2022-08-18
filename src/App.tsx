@@ -7,7 +7,7 @@ function App(): JSX.Element {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/today" element={<Today />} />
+        <Route path="/today:cityName" element={<Today />} />
       </Routes>
     </BrowserRouter>
   );

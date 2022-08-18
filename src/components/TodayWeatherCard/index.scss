@@ -1,0 +1,45 @@
+@import "../../assets/styles/colors.scss";
+
+.today-weather {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  border: solid 1px $grey-primary;
+  width: 25rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    h1 {
+      margin-left: 0.625rem;
+    }
+  }
+
+  .information-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      margin-left: 0.9375rem;
+    }
+  }
+}

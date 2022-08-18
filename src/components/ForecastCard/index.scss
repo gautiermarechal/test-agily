@@ -1,0 +1,52 @@
+@import "../../assets/styles/colors.scss";
+
+.forecast-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.625rem;
+  border: solid 1px $grey-primary;
+  margin-bottom: 0.9375rem;
+  height: 6.25rem;
+  cursor: pointer;
+  transition: 0.2s;
+
+  .date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.forecast-card-wrapper-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.625rem;
+  border: solid 3px $grey-primary;
+  margin-bottom: 0.9375rem;
+  height: 6.25rem;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  .date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.forecast-card-wrapper:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
