@@ -47,3 +47,22 @@
     background-color: $silver-primary;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .wrapper-search-input {
+    .main-input {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper-search-input {
+    width: auto;
+    margin: 20px;
+    .main-input {
+      width: 100%;
+      margin: 20px;
+    }
+  }
+}

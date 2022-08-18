@@ -50,3 +50,12 @@
 .forecast-card-wrapper:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+@media screen and (max-width: 500px) {
+  .forecast-card-wrapper {
+    width: auto;
+  }
+  h1 {
+    font-size: 1.25rem;
+  }
+}

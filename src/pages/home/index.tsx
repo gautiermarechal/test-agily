@@ -3,6 +3,7 @@ import "./index.scss";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import City from "../../assets/models/City";
+import axios from "axios";
 
 function Home(): JSX.Element {
   const { t } = useTranslation();
@@ -10,10 +11,11 @@ function Home(): JSX.Element {
 
   async function handleChange(payload: string): Promise<void> {
     if (payload !== "") {
-      const response = await fetch(
-        `${process.env.REACT_APP_OPEN_WEATHER_API_URL}/geo/1.0/direct?q=${payload}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}&limit=5`
-      );
-      const data = (await response.json()) as City[];
+      const response = await axios({
+        method: "GET",
+        url: `http://localhost:4000/cities/${payload}?limit=5`,
+      });
+      const data = (await response.data.data) as City[];
       setCitiesSuggestions(data);
     } else {
       setCitiesSuggestions([]);

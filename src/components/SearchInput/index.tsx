@@ -29,7 +29,7 @@ function SearchInput(props: SearchInputProps): JSX.Element {
             <div
               className="dropdown-item"
               key={index}
-              onClick={() => navigate(`/today:${city.name}`)}
+              onClick={() => navigate(`/today/${city.name}`)}
             >
               <h4>{city.name},</h4>
               <span>{getCountryNameByCode(city.country)}</span>
